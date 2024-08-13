@@ -7,7 +7,7 @@ export default [
     endDate: "2023-05-15",
     department: "D123",
     credits: 4,
-    image: "/images/RS101.png",
+    image: "rocket-propulsion.jpg",
     description:
       "This course provides an in-depth study of the fundamentals of rocket propulsion, covering topics such as propulsion theory, engine types, fuel chemistry, and the practical applications of rocket technology. Designed for students with a strong background in physics and engineering, the course includes both theoretical instruction and hands-on laboratory work",
   },
@@ -19,7 +19,7 @@ export default [
     endDate: "2023-05-15",
     department: "D123",
     credits: 3,
-    image: "/images/RS102.png",
+    image: "aerodynamics.jpg",
     description:
       "This course offers a comprehensive exploration of aerodynamics, focusing on the principles and applications of airflow and its effects on flying objects. Topics include fluid dynamics, airfoil design, lift and drag forces, and the aerodynamic considerations in aircraft design. The course blends theoretical learning with practical applications, suitable for students pursuing a career in aeronautics or astronautics engineering.",
   },
