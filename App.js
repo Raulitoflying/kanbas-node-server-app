@@ -10,7 +10,7 @@ import AssignmentRoutes from "./Kanbas/Assignments/routes.js";
 import UserRoutes from "./Users/routes.js";
 import cors from "cors";
 const CONNECTION_STRING =
-    process.env.MONGO_CONNECTION_STRING || "mongodb://localhost:27017//kanbas";
+    process.env.MONGO_CONNECTION_STRING || "mongodb://localhost:27017/Kanbas";
 mongoose.connect(CONNECTION_STRING);
 const app = express();
 app.use(
