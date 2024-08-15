@@ -43,20 +43,19 @@ export default function UserRoutes(app) {
         req.session["currentUser"] = currentUser;
         res.json(currentUser);
     };
+    
     const signin = async (req, res) => {
         const { username, password } = req.body;
-        console.log(username, password);
         const currentUser = await dao.findUserByCredentials(username, password);
-        console.log(currentUser);
-        if (currentUser) {
-            req.session["currentUser"] = currentUser;
-            res.json(currentUser);
-        } else {
-            res.status(401).json({
-                message: "Unable to login. Try again later.",
-            });
-        }
+        if (!currentUser) {
+            return res.status(400).send({ error: "User does not exist!" });
+          } else if (currentUser.password != password) {
+            return res.status(400).send({ error: "Password is not correct!" });
+          }
+        req.session["currentUser"] = currentUser;
+        res.json(currentUser);
     };
+        
     const signout = (req, res) => {
         req.session.destroy();    
         res.sendStatus(200);
